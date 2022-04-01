@@ -57,6 +57,38 @@ RULEBLOCK No1
 
         RULE 1 : IF (flujo_vehicular IS muy_alto) AND (hora IS tarde) AND (clima IS muy_lluvioso)
                 THEN vias_taco IS muchas;
+        RULE 2 : IF (flujo_vehicular IS alto) AND (hora IS tarde) AND (clima IS lluvioso)
+                THEN vias_taco IS normal;
+        RULE 3 : IF (flujo_vehicular IS medio) AND (hora IS tarde) AND (clima IS lluvioso)
+                THEN vias_taco IS pocas;
+        RULE 4 : IF (flujo_vehicular IS bajo) AND (hora IS tarde) AND (clima IS lluvioso)
+                THEN vias_taco IS muy_pocas;
+        RULE 5 : IF (flujo_vehicular IS bajo) AND (hora IS tarde) AND (clima IS soleado)
+                THEN vias_taco IS muy_pocas;
+        RULE 6 : IF (flujo_vehicular IS bajo) AND (hora IS noche) AND (clima IS soleado)
+                THEN vias_taco IS muy_pocas;
+        RULE 7 : IF (flujo_vehicular IS bajo) AND (hora IS noche) AND (clima IS muy_lluvioso)
+                THEN vias_taco IS muy_pocas;
+        RULE 8 : IF (flujo_vehicular IS medio) AND (hora IS noche) AND (clima IS muy_lluvioso)
+                THEN vias_taco IS pocas;
+        RULE 9 : IF (flujo_vehicular IS alto) AND (hora IS noche) AND (clima IS muy_lluvioso)
+                THEN vias_taco IS normal;
+        RULE 10 : IF (flujo_vehicular IS muy_alto) AND (hora IS manana) AND (clima IS soleado)
+                THEN vias_taco IS normal;
+        RULE 11 : IF (flujo_vehicular IS muy_alto) AND (hora IS medio_dia) AND (clima IS soleado)
+                THEN vias_taco IS muchas;
+        RULE 12 : IF (flujo_vehicular IS muy_alto) AND (hora IS medio_dia) AND (clima IS lluvioso)
+                THEN vias_taco IS muchas;
+        RULE 13 : IF (flujo_vehicular IS alto) AND (hora IS medio_dia) AND (clima IS nubado)
+                THEN vias_taco IS normal;
+        RULE 14 : IF (flujo_vehicular IS alto) AND (hora IS medio_dia) AND (clima IS lluvioso)
+                THEN vias_taco IS normal;
+        RULE 15 : IF (flujo_vehicular IS medio) AND (hora IS medio_dia) AND (clima IS nubado)
+                THEN vias_taco IS pocas;
+        RULE 16 : IF (flujo_vehicular IS medio) AND (hora IS medio_dia) AND (clima IS lluvioso)
+                THEN vias_taco IS pocas;
+        RULE 17 : IF (flujo_vehicular IS medio) AND (hora IS medio_dia) AND (clima IS muy_lluvioso)
+                THEN vias_taco IS normal;
 
 END_RULEBLOCK
 
